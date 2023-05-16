@@ -1,3 +1,16 @@
+# DB 테이블 목록
+
+| group   | table name        | description       |
+|---------|-------------------|-------------------|
+| member  | member_info       | 회원정보          |
+|         | memeber_security  | 회원정보(로그인)  |
+|         | member_access_log | 회원정보(로그)    |
+| project | project_info      | 프로젝트          |
+|         | project_access    | 프로젝트 접근권환 |
+| issue   | issue_info        | 이슈              |
+|         | issue_tag         | 이슈 태그목록     |
+| tag     | tag_info          | 태그              |
+
 # DB 테이블 명세서
 
 ## notepro

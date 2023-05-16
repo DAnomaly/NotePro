@@ -77,12 +77,14 @@
 | editer      | INT           | O    |    |    | NULL           | 최근수정자  | member_info.pid  |
 | regdate     | DATETIME      | O    |    |    | NULL           | 등록일      |                  |
 | editdate    | DATETIME      | O    |    |    | NULL           | 수정일      |                  |
+| openyn      | CHAR(1)       | O    |    |    | NULL           | 개봉여부    |                  |
 
 ### tag_info
 | Name        | Type          | Null | PK | UQ | DEFAULT        | COMMENT     | FK               |
 |-------------|---------------|:----:|:--:|:--:|----------------|-------------|------------------|
 | pid         | INT           | X    | O  |    | AUTO_INCREMENT |             |                  |
 | title       | VARCHAR(60)   | X    |    |    |                | 이름        |                  |
+| color       | VARCHAR(6)    | X    |    |    |                | 색상        |                  |
 | description | VARCHAR(200)  | X    |    |    |                | 설명        |                  |
 | project_pid | INT           | X    |    |    |                | 프로젝트PID | project_info.pid |
 | regdate     | DATETIME      | O    |    |    | NULL           | 등록일      |                  |
@@ -92,6 +94,6 @@
 | Name        | Type          | Null | PK | UQ | DEFAULT        | COMMENT     | FK               |
 |-------------|---------------|:----:|:--:|:--:|----------------|-------------|------------------|
 | pid         | INT           | X    | O  |    | AUTO_INCREMENT |             |                  |
-| issue_pid   | INT           | X    |    |    |                | 프로젝트PID | issue_info.pid   |
-| project_pid | INT           | X    |    |    |                | 프로젝트PID | tag_info.pid     |
+| issue_pid   | INT           | X    |    |    |                | IssuePID    | issue_info.pid   |
+| tag_pid     | INT           | X    |    |    |                | 태그PID     | tag_info.pid     |
 | regdate     | DATETIME      | O    |    |    | NULL           | 등록일      |                  |
